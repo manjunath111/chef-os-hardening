@@ -35,7 +35,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        cinc_version: [ '18.8.54' ]
+        cinc_version: [ '18', '19' ]
         kitchen_distro:
           - ubuntu-20-04
           - ubuntu-22-04
@@ -87,7 +87,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        cinc_version: [ '18.8.54' ]
+        cinc_version: [ '18', '19' ]
         kitchen_distro:
           - default-ubuntu-22-04
           - default-ubuntu-24-04
