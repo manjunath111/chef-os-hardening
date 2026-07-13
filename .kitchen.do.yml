@@ -8,48 +8,68 @@ transport:
   max_wait_until_ready: 30
 
 platforms:
-- name: centos-7
+- name: ubuntu-22-04
   driver_config:
-    image: centos-7-x64
-- name: centos-stream-8
+    image: ubuntu-22-04-x64
+  lifecycle:
+    post_create:
+      - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
+- name: ubuntu-24-04
   driver_config:
-    image: centos-stream-8-x64
+    image: ubuntu-24-04-x64
+  lifecycle:
+    post_create:
+      - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
+- name: ubuntu-26-04
+  driver_config:
+    image: ubuntu-26-04-x64
+  lifecycle:
+    post_create:
+      - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
+
 - name: centos-stream-9
   driver_config:
     image: centos-stream-9-x64
+- name: centos-stream-10
+  driver_config:
+    image: centos-stream-10-x64
+
 - name: almalinux-8
   driver_config:
     image: almalinux-8-x64
 - name: almalinux-9
   driver_config:
     image: almalinux-9-x64
+- name: almalinux-10
+  driver_config:
+    image: almalinux-10-x64
+
 - name: rockylinux-8
   driver_config:
     image: rockylinux-8-x64
 - name: rockylinux-9
   driver_config:
     image: rockylinux-9-x64
-- name: fedora-37
+- name: rockylinux-10
   driver_config:
-    image: fedora-37-x64
-- name: fedora-38
+    image: rockylinux-10-x64
+
+- name: debian-12
   driver_config:
-    image: fedora-38-x64
-- name: debian-10
-  driver_config:
-    image: debian-10-x64
+    image: debian-12-x64
   lifecycle:
     post_create:
       - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
-- name: debian-11
+- name: debian-13
   driver_config:
-    image: debian-11-x64
+    image: debian-13-x64
   lifecycle:
     post_create:
       - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
-- name: ubuntu-20-04
+
+- name: fedora-43
   driver_config:
-    image: ubuntu-20-04-x64
-  lifecycle:
-    post_create:
-      - remote: sleep 10; while pgrep apt-get >/dev/null; do echo "Waiting for apt-get..."; sleep 5; done # let the installation of DO droplet-agent to finish and unlock dpkg
+    image: fedora-43-x64
+- name: fedora-44
+  driver_config:
+    image: fedora-44-x64

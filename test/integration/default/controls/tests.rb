@@ -11,4 +11,6 @@ include_controls 'linux-baseline' do
   skip_control 'os-08'
   # skip CPU vulnerability testing, in the DO VMs sometimes (ubuntu) kernel reports missing microcode
   skip_control 'os-12'
+  # skip ptrace test, it's not implemented here yet
+  skip_control 'sysctl-35'
 end

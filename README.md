@@ -30,17 +30,13 @@ It will not:
 
 ### Platform
 
-- Debian 10, 11
-- Ubuntu 18.04, 20.04
-- RHEL 7, 8, 9
-- CentOS 7
-- CentOS Stream 8, 9
-- Oracle Linux 7, 8, 9
-- AlmaLinux 8, 9
-- Rocky Linux 8, 9
-- Fedora 37, 38
-- OpenSuse Leap 42
-- Amazon Linux 1, 2
+- Ubuntu 20.04, 22.04, 24.04
+- CentOS Stream 9, 10
+- AlmaLinux 8, 9, 10
+- Rocky Linux 8, 9, 10
+- Oracle Linux 8, 9, 10
+- Debian 12
+- Fedora 43, 44
 
 ## Attributes
 

@@ -6,27 +6,37 @@ platforms:
 - name: ubuntu-20-04
   driver_config:
     box: bento/ubuntu-20.04
-- name: centos-7
-- name: centos-stream-8
+
+- name: ubuntu-22-04
+  driver_config:
+    box: bento/ubuntu-22.04
+- name: ubuntu-24-04
+  driver_config:
+    box: bento/ubuntu-24.04
+- name: ubuntu-26-04
+  driver_config:
+    box: bento/ubuntu-26.04
+
 - name: centos-stream-9
+- name: centos-stream-10
+
 - name: almalinux-8
 - name: almalinux-9
+- name: almalinux-10
+
 - name: rockylinux-8
 - name: rockylinux-9
-- name: oracle-7
+- name: rockylinux-10
+
 - name: oracle-8
 - name: oracle-9
-- name: debian-10
-- name: debian-11
-- name: fedora-37
-- name: fedora-38
-- name: opensuse-leap-42
-- name: amazonlinux-1
-  driver_config:
-    box: realreadme/amazon2016.09
-- name: amazonlinux-2
-  driver_config:
-    box: stakahashi/amazonlinux2
+- name: oracle-10
+
+- name: debian-12
+- name: debian-13
+
+- name: fedora-43
+- name: fedora-44
 
 provisioner:
   name: chef_zero
