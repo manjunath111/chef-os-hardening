@@ -19,6 +19,9 @@
 # limitations under the License.
 #
 
+# we need that for restarts if auditd service, hence on RHEL it's blocked to be restarted via systemd
+package 'initscripts' if node['platform_family'] == 'rhel'
+
 package node['os-hardening']['packages']['auditd']
 
 service 'auditd' do

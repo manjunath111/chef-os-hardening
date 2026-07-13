@@ -96,6 +96,8 @@ jobs:
           - default-centos-stream-10
 
           - default-almalinux-8
+          - default-almalinux-9
+          - default-almalinux-10
 
           - default-rockylinux-8
           - default-rockylinux-9
