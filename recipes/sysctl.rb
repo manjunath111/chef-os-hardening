@@ -22,21 +22,16 @@
 
 ::Chef::Recipe.send(:include, SysctlCookbook::SysctlHelpers::Param)
 
-# cleanup of old sysctl related configurations. This can be removed at some point in the future
-# https://github.com/dev-sec/chef-os-hardening/issues/166#issuecomment-322433264
-# https://github.com/sous-chefs/sysctl/pull/61/files#diff-25e5d4a4446ae12a0d6f1162b6160375
-old_sysctl_conf_file = '/etc/sysctl.conf'
-if platform_family?('arch', 'debian', 'rhel', 'fedora', 'amazon', 'suse')
-  old_sysctl_conf_file = if platform_family?('suse') && node['platform_version'].to_f < 12.0
-                           '/etc/sysctl.conf'
-                         else
-                           '/etc/sysctl.d/99-chef-attributes.conf'
-                         end
-end
-
-file 'cleanup of old sysctl settings' do
-  path old_sysctl_conf_file
-  action :delete
+# on debian and ubuntu 26.04 there is an upstream issue with sysctl
+# https://github.com/chef/chef/issues/15263
+if (platform?('debian') && node['platform_version'].to_f >= 13) ||
+   (platform?('ubuntu') && node['platform_version'].to_f >= 26.04)
+  file '/etc/sysctl.conf' do
+    content <<~EOF
+      # this is a placeholder due to chef upstream bug https://github.com/chef/chef/issues/15263
+      # this placeholder was created by os-hardening cookbook as a workaround
+    EOF
+  end
 end
 
 # default attributes
