@@ -57,7 +57,6 @@ jobs:
           - oracle-9
           - oracle-10
 
-          - debian-12
           - debian-13
 
           - fedora-43
@@ -102,8 +101,6 @@ jobs:
           - default-rockylinux-8
           - default-rockylinux-9
           - default-rockylinux-10
-
-          - default-debian-12
 
           - default-fedora-43
           - default-fedora-44
