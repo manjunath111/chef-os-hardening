@@ -35,7 +35,6 @@ It will not:
 - AlmaLinux 8, 9, 10
 - Rocky Linux 8, 9, 10
 - Oracle Linux 8, 9, 10
-- Debian 12
 - Fedora 43, 44
 
 ## Attributes
