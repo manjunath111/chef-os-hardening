@@ -90,6 +90,7 @@ jobs:
         kitchen_distro:
           - default-ubuntu-22-04
           - default-ubuntu-24-04
+          - default-ubuntu-26-04
 
           - default-centos-stream-9
           - default-centos-stream-10
@@ -101,6 +102,8 @@ jobs:
           - default-rockylinux-8
           - default-rockylinux-9
           - default-rockylinux-10
+
+          - default-debian-13
 
           - default-fedora-43
           - default-fedora-44

@@ -30,11 +30,12 @@ It will not:
 
 ### Platform
 
-- Ubuntu 20.04, 22.04, 24.04
+- Ubuntu 20.04, 22.04, 24.04, 26.04
 - CentOS Stream 9, 10
 - AlmaLinux 8, 9, 10
 - Rocky Linux 8, 9, 10
 - Oracle Linux 8, 9, 10
+- Debian 13
 - Fedora 43, 44
 
 ## Attributes
