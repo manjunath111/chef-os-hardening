@@ -1,6 +1,6 @@
 driver:
   name: digitalocean
-  size: s-1vcpu-1gb
+  size: s-1vcpu-2gb
   region: nyc3
 
 transport:
